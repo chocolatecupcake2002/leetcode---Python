@@ -1,0 +1,18 @@
+The code follows Dynamic approach.
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        #Initializing the steps as first and second
+        #keeping first=1 as the number of steps to reach final step from final step is one
+        #keeping second=1 as the number of steps to reach final from second last level is 1. this
+        #case is same for all.
+        first=1
+        second=1
+        #now by dp and memorization, we place a for loop for n-1 times.assign temporary variable to first 
+        for i in range(n-1):
+            temp=first
+        #now since the algorithm works by value on previous level, add first as first+second
+            first+=second
+        #now assign second to temp as on each iteration, we keep updating second to value of first to perfom addition.
+            second=temp
+        #now return first
+        return first
