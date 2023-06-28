@@ -1,0 +1,8 @@
+from collections import Counter 
+class Solution:
+  def majorityElement(self, nums: List[int]) -> int:
+      num_count=Counter(nums)
+      for i,count in num_count.items():
+        max_ele=max(num_count,key=num_count.get)
+      return max_ele
+   
