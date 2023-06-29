@@ -1,0 +1,7 @@
+from collections import Counter
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        count_num = Counter(nums)
+        for num, count in count_num.items():
+            if count == 1:
+                return num
