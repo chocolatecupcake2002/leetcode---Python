@@ -1,0 +1,17 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        ans=[]
+        x_list = nums[:n]
+        y_list = nums[n:]
+        for i in range(n):
+            ans.append(x_list[i])
+            ans.append(y_list[i])
+        return ans
+
+
+        """
+        :type nums: List[int]
+        :type n: int
+        :rtype: List[int]
+        """
+        
