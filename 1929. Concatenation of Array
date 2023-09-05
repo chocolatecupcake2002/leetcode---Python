@@ -1,0 +1,13 @@
+class Solution(object):
+    def getConcatenation(self, nums):
+        ans = []
+        n = len(nums)
+        ans.extend(nums)  
+        ans.extend(nums)  
+        return ans
+
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        
