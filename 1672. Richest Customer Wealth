@@ -1,0 +1,26 @@
+#1. Ans1
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        maxx=0
+        for cust in accounts:
+            count=sum(cust)
+            maxx=max(count,maxx)
+            count=0
+            
+        return maxx
+        
+#2.Ans2
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        maxx=0
+        for i in range(0,len(accounts)):
+            count=0
+            for j in range(0,len(accounts[i])):
+                count+=accounts[i][j]
+            maxx=max(count,maxx)
+            
+        return maxx
+        
+
+
+        
